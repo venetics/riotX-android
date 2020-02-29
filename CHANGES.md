@@ -20,7 +20,7 @@ Build 🧱:
  -
 
 Other changes:
- -
+ - Add a setting to prevent screenshots of the application, disabled by default (#1027)
 
 Changes in RiotX 0.17.0 (2020-02-27)
 ===================================================

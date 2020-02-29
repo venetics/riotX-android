@@ -160,6 +160,9 @@ class VectorPreferences @Inject constructor(private val context: Context) {
         const val SETTINGS_USE_RAGE_SHAKE_KEY = "SETTINGS_USE_RAGE_SHAKE_KEY"
         const val SETTINGS_RAGE_SHAKE_DETECTION_THRESHOLD_KEY = "SETTINGS_RAGE_SHAKE_DETECTION_THRESHOLD_KEY"
 
+        // Security
+        const val SETTINGS_SECURITY_USE_FLAG_SECURE = "SETTINGS_SECURITY_USE_FLAG_SECURE"
+
         // other
         const val SETTINGS_MEDIA_SAVING_PERIOD_KEY = "SETTINGS_MEDIA_SAVING_PERIOD_KEY"
         private const val SETTINGS_MEDIA_SAVING_PERIOD_SELECTED_KEY = "SETTINGS_MEDIA_SAVING_PERIOD_SELECTED_KEY"
@@ -209,7 +212,8 @@ class VectorPreferences @Inject constructor(private val context: Context) {
                 SETTINGS_SET_SYNC_TIMEOUT_PREFERENCE_KEY,
                 SETTINGS_SET_SYNC_DELAY_PREFERENCE_KEY,
 
-                SETTINGS_USE_RAGE_SHAKE_KEY
+                SETTINGS_USE_RAGE_SHAKE_KEY,
+                SETTINGS_SECURITY_USE_FLAG_SECURE
         )
     }
 
@@ -755,5 +759,12 @@ class VectorPreferences @Inject constructor(private val context: Context) {
      */
     fun displayAllEvents(): Boolean {
         return defaultPrefs.getBoolean(SETTINGS_DISPLAY_ALL_EVENTS_KEY, false)
+    }
+
+    /**
+     * The user does not allow screenshots of the application
+     */
+    fun useFlagSecure(): Boolean {
+        return defaultPrefs.getBoolean(SETTINGS_SECURITY_USE_FLAG_SECURE, false)
     }
 }
