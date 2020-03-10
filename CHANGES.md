@@ -2,7 +2,7 @@ Changes in RiotX 0.18.0 (2020-XX-XX)
 ===================================================
 
 Features ✨:
- -
+ - Change password (#528)
 
 Improvements 🙌:
  - Share image and other media from e2e rooms (#677)
